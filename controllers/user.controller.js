@@ -13,7 +13,7 @@ export async function getSuggestedConnections(req, res) {
       _id: { $ne: req.user_id, $nin: currentUser.connections },
     })
       // select means
-      .select("name username headline profilePicture")
+      .select(" name username headline profilePicture")
       .limit(5);
     res.json(suggestedUser);
   } catch (error) {
