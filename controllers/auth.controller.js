@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { sendWelcomeEmail } from "../emails/emailhandlers.js";
 
@@ -109,10 +109,9 @@ export async function logout(req, res) {
   }
 }
 
-
 export async function getCurrentUser(req, res) {
   try {
-     res.json(req.user)
+    res.json(req.user);
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
   }
