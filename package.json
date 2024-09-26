@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "start": "node index.js",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
   "type": "module",
+  "engines": {
+    "node": "20.14.0"
+  },
   "license": "ISC",
   "description": "",
   "dependencies": {
